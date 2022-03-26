@@ -16,7 +16,7 @@
   z-index: 1;
 }
 
-/* 유용한 애니메이션!*/
+/* 유용한 애니메이션이다!*/
 @keyframes fadeIn {
   from {
     transform: translateY(130px);
