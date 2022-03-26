@@ -1,0 +1,74 @@
+.nav {
+  position: fixed; /* !!!nav 아래로 옮기기 */
+  bottom: 0;
+  width: 100%;
+  background-color: #f9f9fa;
+  padding: 20px 50px;
+  box-sizing: border-box; /* 중요!! 
+  박스 사이즈가 200px인데 padding을 주면 css는 
+  사이즈를 유지한채로 padding을 주려고 함.
+  200px을 유지하기 위해 box를 크게 만듦.
+  그래서 css에게 박스 사이즈가 작아져도 상관 없다고 말 해줘야 함!
+  내 box 사이즈를 늘리지 말아줘 */
+  border-top: 1px solid rgba(173, 173, 173, 0.5);
+}
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__link {
+  position: relative;
+  color: #2e363e;
+}
+
+@keyframes notificationAnimation {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-5px) rotateY(180deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+.nav__notification {
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  animation: notificationAnimation 2s ease-in-out infinite;
+}
+
+@keyframes appearBtnAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.nav__btn {
+  transform: translateY(50px); /*밑에서부터*/
+  opacity: 0;
+  animation: appearBtnAnimation 0.3s ease-in-out forwards;
+  /*
+  왜 nav__btn에 transLateY(위치)를 넣었나?
+  2,3,4, 번재 자식이 딜레이가 있는 애니메이션 가지고 있다
+  last-child는 0.8초동안 애니메이션이 없다. 그 뜻은 0.8초 동안 마지막 자식이
+   화면 아래에 있지 않다. 원래 위치에서 시작
+  그래서 초기 위치를 nav__btn에 넣어줌. 애니메이션을 갖고 있든 갖지 않든
+  모두 바닥에서부터 시작.
+  */
+}
+
+.nav__btn:nth-child(2) {
+  animation-delay: 0.2s; /*첫 번째 애니메이션이 끝나면 시작*/
+}
+.nav__btn:nth-child(3) {
+  animation-delay: 0.5s;
+}
+.nav__btn:last-child {
+  animation-delay: 0.8s;
+}
