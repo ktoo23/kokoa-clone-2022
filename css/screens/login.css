@@ -34,8 +34,10 @@
   margin-bottom: 25px;
 }
 
-/*css not() input type이 submit이 아닌 경우
-  border-bottom과 transition이 적용*/
+/*
+pseudo selectors
+css not() input type이 submit이 아닌 경우
+border-bottom과 transition이 적용*/
 #login-form input:not([type="submit"]) {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   transition: border-color 0.3s ease-in-out;
