@@ -109,9 +109,5 @@
 
 .open-post__heart-count:hover i {
   will-change: transform;
-  /*브라우저에게 어떤 것이 변할 것인지 말해줌.
-  브라우저는 돕는 행위. 변할 것이 확실하므로 
-  그래픽 카드를 이용해 애니메이션을 가속화할 수 있다.
-  지금 경우에는 transform이 변화*/
   animation: heartBeat 2s linear infinite;
 }
