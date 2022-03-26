@@ -46,9 +46,5 @@
   align-items: center;
   font-size: 122px;
   animation: hideSplashScreen 0.3s ease-in-out forwards;
-  /*
-  애니메이션의 마지막 값(keyFrames)을 기억하고 싶을 때
-  forwards 속성
-  */
   animation-delay: 2s; /*지연시키기*/
 }
